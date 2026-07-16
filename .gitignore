@@ -1,0 +1,8 @@
+.DS_Store
+*.swp
+*.tmp
+.env
+.env.*
+!.env.example
+docs/reports/**/*.json
+docs/reports/**/*.log
