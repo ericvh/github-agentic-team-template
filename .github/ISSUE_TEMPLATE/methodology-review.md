@@ -1,3 +1,10 @@
+---
+name: Methodology Review
+about: Keep, delete, automate, or change one operating-method surface from named evidence
+title: ""
+labels: []
+---
+
 # Methodology Review
 
 ## Human Problem
@@ -10,7 +17,7 @@
 - Review id:
 - Trigger: landed-slice cadence / milestone close / repeated blocker / repeated
   proof failure / workflow drift / unreadable human surface / repeated manual work
-- Issues and MRs reviewed:
+- Issues and PRs reviewed:
 - Current milestone:
 
 ## Question, Evidence, Action
@@ -24,9 +31,9 @@ Replace every `TBD`. Each action must be `keep`, `delete`, `automate`, or
 | What added friction without improving proof or review? | TBD | TBD | TBD |
 | Which gate passed while the change was still wrong? | TBD | TBD | TBD |
 | Which reviewer findings changed the outcome? | TBD | TBD | TBD |
-| Which GitLab or durable state drifted? | TBD | TBD | TBD |
+| Which GitHub or durable state drifted? | TBD | TBD | TBD |
 | Which manual task repeated enough to automate or remove? | TBD | TBD | TBD |
-| Could an uninvolved engineer understand current state from GitLab? | TBD | TBD | TBD |
+| Could an uninvolved engineer understand current state from GitHub? | TBD | TBD | TBD |
 | Which follow-up lacks an issue and exact reconsideration trigger? | TBD | TBD | TBD |
 | Which operating surface failed? | TBD | TBD | TBD |
 | What is the single highest-leverage change? | TBD | TBD | TBD |

@@ -1,6 +1,6 @@
 ---
 name: agent-team-evidence-map
-description: Use before implementation to pin source, specification, runtime, data, requirement, or finding evidence; map dependencies and risks; define a bounded target and discriminating proof plan; and prepare a dependency-ordered GitLab work-slice issue.
+description: Use before implementation to pin source, specification, runtime, data, requirement, or finding evidence; map dependencies and risks; define a bounded target and discriminating proof plan; and prepare a dependency-ordered GitHub work-slice issue.
 ---
 
 # Agent Team Evidence Map
@@ -13,8 +13,8 @@ proof-carrying work slice before implementation begins.
 ## Fast Path
 
 1. Read `AGENTS.md`, `docs/project-formulation.md`, `docs/PROOF_MODEL.md`,
-   `docs/WORKFLOW.md`, and the relevant ledger rows.
-2. Inspect GitLab for the current milestone, active issue, planned horizon, and
+   `docs/WORKFLOW.md`, `docs/HOST.md`, and the relevant ledger rows.
+2. Inspect GitHub for the current milestone, active issue, planned horizon, and
    predecessor state.
 3. Pin the authoritative evidence by commit, version, timestamp, dataset hash,
    or captured runtime artifact.
@@ -24,7 +24,7 @@ proof-carrying work slice before implementation begins.
 6. Name a plausible false implementation and the observation that would reject
    it.
 7. Update `evidence-map.md` and `proof-ledger.md`.
-8. Create or refresh a GitLab issue using the `work-slice` template.
+8. Create or refresh a GitHub issue using the `Work Slice` template.
 
 ## Required Outputs
 
@@ -36,7 +36,7 @@ proof-carrying work slice before implementation begins.
 - Highest-risk reviewer focus.
 - Explicit non-claims and deferred dependencies.
 - Owner, authority, write scope, and independent reviewer plan.
-- GitLab issue and durable ledger updates.
+- GitHub issue and durable ledger updates.
 
 ## Rules
 

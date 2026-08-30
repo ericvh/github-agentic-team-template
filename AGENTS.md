@@ -4,21 +4,21 @@
 
 <State one observable project outcome and the authoritative evidence source.>
 
-GitLab project: `<namespace/project>`.
+GitHub repository: `<owner/repo>`.
 
 ## Agent Fast Path
 
 1. Inspect `pwd` and `git status --short --branch`.
-2. Read this guide, the active GitLab issue, and the narrowest project skill.
-3. Read `docs/HUMAN_SURFACE.md`, `docs/WORKFLOW.md`, and the relevant evidence,
-   proof, decision, experiment, and risk rows.
+2. Read this guide, the active GitHub issue, and the narrowest project skill.
+3. Read `docs/HUMAN_SURFACE.md`, `docs/WORKFLOW.md`, `docs/HOST.md`, and the
+   relevant evidence, proof, decision, experiment, and risk rows.
 4. Confirm authority, issue ownership, predecessor state, write scope, evidence
    version, current proof level, target proof level, and independent reviewer.
 5. Work on one semantic slice. Preserve unrelated work and do not widen scope
    silently.
 6. Run the narrowest discriminating proof, then the required shared gates.
 7. Obtain independent review before ready or merge state.
-8. After landing, reconcile GitLab and durable project evidence before starting
+8. After landing, reconcile GitHub and durable project evidence before starting
    the next dependent issue.
 
 ## Authority Contract
@@ -28,7 +28,7 @@ Default authority level: `A2`.
 Agents may:
 
 - read the repository and evidence sources named by the active issue;
-- create scoped issues, branches, commits, and draft merge requests;
+- create scoped issues, branches, commits, and draft pull requests;
 - run project-approved verification;
 - update project-local evidence and workflow artifacts for the active slice.
 
@@ -42,7 +42,7 @@ A request to finish or continue does not imply broader authority.
 
 ## Human Surface Contract
 
-GitLab is the durable coordination surface. Issues and merge requests lead with:
+GitHub is the durable coordination surface. Issues and pull requests lead with:
 
 1. the human goal and why it is next;
 2. the versioned evidence anchor;
@@ -53,20 +53,20 @@ GitLab is the durable coordination surface. Issues and merge requests lead with:
 
 Agent ids, transcripts, session paths, token tables, raw runner logs, and long
 evidence appendices belong in checked-in reports or job artifacts. Link them
-once from the merge request when they answer a real audit question.
+once from the pull request when they answer a real audit question.
 
 ## Team Contract
 
 - The **orchestrator** owns dependency order, authority, issue assignment,
-  branch/MR integration, and conflict resolution.
+  branch/PR integration, and conflict resolution.
 - The **evidence mapper** pins sources, constraints, prior behavior, risks, and
   the proof plan before implementation.
-- An **implementer** owns one GitLab issue and one disjoint write scope.
+- An **implementer** owns one GitHub issue and one disjoint write scope.
 - The **independent reviewer** is distinct from the creator and reviews the
   stated claim, highest-risk boundary, and proof sufficiency.
 - The **CI/proof owner** keeps verification executable and distinguishes
   infrastructure failure from product failure.
-- The **state closer** reconciles landed code, issue/MR state, evidence, proof,
+- The **state closer** reconciles landed code, issue/PR state, evidence, proof,
   decisions, experiments, risks, and bounded follow-ups.
 
 Parallel agents must own disjoint issues and disjoint write scopes. If two
@@ -75,7 +75,7 @@ interface split first.
 
 ## Backlog Contract
 
-GitLab is the backlog. Maintain a short dependency-ordered horizon configured in
+GitHub is the backlog. Maintain a short dependency-ordered horizon configured in
 `docs/project-formulation.md`. Each active or planned slice names:
 
 - predecessor and what it unblocks;
@@ -135,21 +135,24 @@ No self-approval. Review comments classify landing impact:
 - `praise:` a specific engineering choice worth retaining.
 
 Every blocker needs a concrete landing path. The creator responds with changed
-code or evidence. An actionable suggestion is implemented, linked to a GitLab
+code or evidence. An actionable suggestion is implemented, linked to a GitHub
 issue with an exact reconsideration trigger, or explicitly declined/superseded.
-The merge request remains draft or `review::changes-requested` while blockers or
+The pull request remains draft or `review:changes-requested` while blockers or
 decision-critical questions remain unresolved.
 
-## GitLab Contract
+## GitHub Contract
 
 - Milestones are outcome phases with explicit exit evidence.
 - Use the label families defined in `docs/WORKFLOW.md`.
-- Create issues and MRs from the templates under `.gitlab/`.
-- Branches use `<kind>/<issue-iid>-<short-scope>`.
-- Notes are sparse: planning change, proof update, independent review, creator
-  response, human steering that changes the contract, and final closeout.
-- The GitLab issue/MR state is authoritative for workflow state. Checked-in
-  ledgers preserve domain evidence and must not silently contradict GitLab.
+- Create issues and PRs from the templates under `.github/`.
+- Branches use `<kind>/<issue-number>-<short-scope>`.
+- Comments are sparse: planning change, proof update, independent review,
+  creator response, human steering that changes the contract, and final
+  closeout.
+- The GitHub issue/PR state is authoritative for workflow state. Checked-in
+  ledgers preserve domain evidence and must not silently contradict GitHub.
+- Host-specific paths, CLI, and deferred dual-host or GitHub-native work live
+  in `docs/HOST.md`. Do not add host enforcement in an unrelated slice.
 
 ## Methodology Contract
 
@@ -162,18 +165,18 @@ A methodology review answers each question from named evidence and chooses
 method change. Prefer deleting or automating friction over adding prose.
 
 Every methodology gap must identify the surface that failed: this guide, a
-skill, script, template, CI job, GitLab convention, or ledger.
+skill, script, template, CI job, GitHub convention, or ledger.
 
 ## Closeout Contract
 
 Before final reporting, name:
 
 - exact verification commands and results;
-- issue/MR state and independent review decision;
+- issue/PR state and independent review decision;
 - evidence and proof movement;
 - decisions, experiments, risks, and follow-ups updated;
 - methodology trigger status;
-- the next dependency-ordered GitLab issue.
+- the next dependency-ordered GitHub issue.
 
-The next agent must be able to resume from GitLab and checked-in evidence without
+The next agent must be able to resume from GitHub and checked-in evidence without
 reconstructing the previous session from chat.

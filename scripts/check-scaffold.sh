@@ -6,11 +6,12 @@ cd "$(dirname "$0")/.."
 required_files=(
   AGENTS.md
   README.md
-  .gitlab-ci.yml
-  .gitlab/issue_templates/work-slice.md
-  .gitlab/issue_templates/methodology-review.md
-  .gitlab/merge_request_templates/work-slice.md
+  .github/workflows/scaffold.yml
+  .github/ISSUE_TEMPLATE/work-slice.md
+  .github/ISSUE_TEMPLATE/methodology-review.md
+  .github/PULL_REQUEST_TEMPLATE.md
   docs/project-formulation.md
+  docs/HOST.md
   docs/HUMAN_SURFACE.md
   docs/WORKFLOW.md
   docs/PROOF_MODEL.md
@@ -49,8 +50,10 @@ required_contracts=(
   "docs/HUMAN_SURFACE.md|Follow-Up Contract"
   "docs/PROOF_MODEL.md|Discriminating Observation"
   "docs/WORKFLOW.md|Work-Slice State Machine"
-  ".gitlab/issue_templates/work-slice.md|Proof Promotion"
-  ".gitlab/merge_request_templates/work-slice.md|Independent Review"
+  "docs/HOST.md|Option B"
+  "docs/HOST.md|Option C"
+  ".github/ISSUE_TEMPLATE/work-slice.md|Proof Promotion"
+  ".github/PULL_REQUEST_TEMPLATE.md|Independent Review"
 )
 
 for check in "${required_contracts[@]}"; do
@@ -61,6 +64,11 @@ for check in "${required_contracts[@]}"; do
     failures=$((failures + 1))
   fi
 done
+
+if [[ -e .gitlab-ci.yml || -d .gitlab ]]; then
+  echo "GitLab host files must not ship in this GitHub edition; recover from git history for Option B" >&2
+  failures=$((failures + 1))
+fi
 
 skill_names_seen=$'\n'
 skill_count=0

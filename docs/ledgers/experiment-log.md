@@ -1,6 +1,6 @@
 # Experiment Log
 
-| ID | Date | Hypothesis | Method | Result | Artifact | Decision/claim affected | Rerun trigger | GitLab issue/MR |
+| ID | Date | Hypothesis | Method | Result | Artifact | Decision/claim affected | Rerun trigger | GitHub issue/PR |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | X0001 |  |  |  | Planned |  |  |  |  |
 

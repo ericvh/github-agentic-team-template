@@ -1,4 +1,4 @@
-# Work Slice MR
+# Work Slice PR
 
 ## Human Summary
 
@@ -48,6 +48,6 @@ For each actionable item provide either:
 
 ## Closeout
 
-- Current GitLab status/proof/review labels:
+- Current GitHub status/proof/review labels:
 - Next dependency-ordered issue:
 - State closer:

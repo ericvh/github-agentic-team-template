@@ -6,9 +6,9 @@
 - Human outcome:
 - Evidence version:
 - Target component/API/artifact:
-- GitLab milestone:
-- GitLab issue:
-- GitLab MR:
+- GitHub milestone:
+- GitHub issue:
+- GitHub PR:
 - Branch:
 - Authority level/exceptions:
 - Owner:
@@ -24,7 +24,7 @@
 
 ## Backlog Context
 
-| Rank | GitLab issue | Outcome | Dependency/proof boundary | Why next | Stop/defer rule |
+| Rank | GitHub issue | Outcome | Dependency/proof boundary | Why next | Stop/defer rule |
 | --- | --- | --- | --- | --- | --- |
 | 1 |  |  |  |  |  |
 | 2 |  |  |  |  |  |
@@ -59,14 +59,14 @@ Plausible wrong mechanism and the observation that rejects it:
 
 ## Team Orchestration
 
-| Role | Agent/thread | GitLab issue | Read scope | Write scope | Required output | Integration order |
+| Role | Agent/thread | GitHub issue | Read scope | Write scope | Required output | Integration order |
 | --- | --- | --- | --- | --- | --- | --- |
 | Orchestrator |  |  |  | workflow state | ordered integration | first/last |
 | Evidence mapper |  |  |  | evidence rows | evidence/proof map | before code |
 | Implementer |  |  |  |  | commit and verification |  |
-| Independent reviewer |  |  | full MR | review note only | decision/findings | after coherent MR |
+| Independent reviewer |  |  | full PR | review note only | decision/findings | after coherent PR |
 | CI/proof owner |  |  | pipeline/proof | scoped infrastructure | verified result | before ready |
-| State closer |  |  | GitLab + records | state rows | landed reconciliation | last |
+| State closer |  |  | GitHub + records | state rows | landed reconciliation | last |
 
 ## Exit Criteria
 
@@ -75,4 +75,4 @@ Plausible wrong mechanism and the observation that rejects it:
 - [ ] Proof rejects the named plausible false positive.
 - [ ] Required review and approval are complete.
 - [ ] Follow-ups have bounded dispositions.
-- [ ] GitLab and durable evidence agree after landing.
+- [ ] GitHub and durable evidence agree after landing.

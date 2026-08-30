@@ -7,7 +7,7 @@ not fit the project rather than preserving unused process.
 
 - Project name: `<project-name>`
 - Observable outcome: `<one result a user or operator can observe>`
-- GitLab project: `<namespace/project>`
+- GitHub repository: `<owner/repo>`
 - Default branch: `main`
 - First vertical scenario: `<one end-to-end behavior>`
 
@@ -15,7 +15,7 @@ not fit the project rather than preserving unused process.
 
 - Default level: `A2`
 - Agents may: read named evidence; create scoped issues, branches, commits, and
-  draft MRs; run approved verification; update active-slice evidence.
+  draft PRs; run approved verification; update active-slice evidence.
 - Human gate: merge, release, deployment, production mutation, external
   communication, destructive history change, secret handling, or wider scope.
 - Exceptions: `<explicitly granted or restricted actions>`
@@ -26,7 +26,7 @@ Authority levels:
 | --- | --- | --- |
 | A0 | Read and report only | sensitive discovery or audit |
 | A1 | Create plans and draft issues | early formulation |
-| A2 | Create branches, commits, draft MRs, and verification evidence | default engineering work |
+| A2 | Create branches, commits, draft PRs, and verification evidence | default engineering work |
 | A3 | Mark ready and merge after independent approval and green gates | trusted low/medium-risk project |
 | A4 | Release, deploy, or mutate external systems | explicit project-specific authority only |
 
@@ -60,17 +60,22 @@ Authority levels:
 - Creator and reviewer must be distinct: `yes`
 - Required approval count: `1`
 - Blocking comment classes: `blocker`, decision-critical `question`
-- Unresolved blocker policy: MR remains draft or changes-requested
+- Unresolved blocker policy: PR remains draft or changes-requested
 - Human reviewer requirement: `<always/risk-based/agent reviewer acceptable>`
+- Review authority in this edition: labels `review:*` and a review-note comment
+- Native GitHub reviews / CODEOWNERS / rulesets: deferred (see `docs/HOST.md`)
 
-## GitLab
+## GitHub
 
 - Milestone model: `<outcome phases>`
-- Branch pattern: `<kind>/<issue-iid>-<short-scope>`
+- Branch pattern: `<kind>/<issue-number>-<short-scope>`
 - Required label families: `kind`, `area`, `proof`, `status`, `review`
+- Label separator: `:` (GitLab origin used `::`; keep family tokens stable)
 - Optional label families: `risk`
-- Issue/MR workflow authority: GitLab
+- Issue/PR workflow authority: GitHub
+- Host CLI: `gh`
 - Detailed audit location: checked-in report or CI artifact, linked once
+- Host edition and deferred B/C work: `docs/HOST.md`
 
 ## Cadence
 
@@ -81,8 +86,8 @@ Authority levels:
 
 ## Audit and Cost
 
-- MR-local agent report: `off | optional | required`
-- Human steering capture: `off | concise GitLab note | report`
+- PR-local agent report: `off | optional | required`
+- Human steering capture: `off | concise GitHub comment | report`
 - Context-boundary capture: `off | report`
 - Token/cost accounting: `off | diagnostic | required`
 - Measurement question: `<why this telemetry changes a decision>`

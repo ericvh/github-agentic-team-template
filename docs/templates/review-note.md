@@ -27,7 +27,7 @@ Rules:
 
 - Review the change, not the author.
 - Compare the issue claim, implementation, runtime behavior, and proof.
-- Focus on what could go wrong if the MR landed as-is.
+- Focus on what could go wrong if the PR landed as-is.
 - Ask for tests where they discriminate a material risk or contract.
 - Give every blocker a concrete landing path.
 - Keep unrelated redesign as a bounded follow-up or decline it.

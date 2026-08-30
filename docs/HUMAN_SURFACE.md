@@ -1,7 +1,7 @@
-# Human GitLab Surface
+# Human GitHub Surface
 
-GitLab is useful only if an engineer who did not participate in the agent session
-can understand the project state from the issue/MR list and the top of each
+GitHub is useful only if an engineer who did not participate in the agent session
+can understand the project state from the issue/PR list and the top of each
 work item.
 
 ## Issue Contract
@@ -17,12 +17,12 @@ A work-slice issue should fit on one screen before detailed checklists:
 7. Backlog position, predecessor, unblocks, parallel lane, and owner.
 
 Do not put agent ids, transcripts, token tables, runner ids, or complete
-orchestration logs in the issue body. Use notes for meaningful planning changes,
-proof updates, blockers, or human steering that changes the contract.
+orchestration logs in the issue body. Use comments for meaningful planning
+changes, proof updates, blockers, or human steering that changes the contract.
 
-## Merge Request Contract
+## Pull Request Contract
 
-The top of a merge request must answer:
+The top of a pull request must answer:
 
 - What behavior or outcome changed?
 - What mechanism or implementation carries it?
@@ -31,12 +31,12 @@ The top of a merge request must answer:
 - What remains unsafe to assume?
 
 Detailed agent provenance, session boundaries, raw logs, and cost tables belong
-in a checked-in report or CI artifact. When required, the MR carries one compact
+in a checked-in report or CI artifact. When required, the PR carries one compact
 link and a short status summary.
 
-## Sparse Notes
+## Sparse Comments
 
-Useful notes are:
+Useful comments are:
 
 - a material planning or scope change;
 - a proof update or blocker;
@@ -46,7 +46,7 @@ Useful notes are:
   action;
 - final ready or landed closeout.
 
-Do not create a note for every label change, ledger edit, agent handoff,
+Do not create a comment for every label change, ledger edit, agent handoff,
 telemetry refresh, or routine runner poll.
 
 ## Review Comments
@@ -68,11 +68,11 @@ comments.
 
 ## Follow-Up Contract
 
-A known gap is behavior the MR does not claim. It is not automatically a promise.
+A known gap is behavior the PR does not claim. It is not automatically a promise.
 Every actionable promised fix, accepted suggestion, cleanup, or deferred process
 change must have one complete disposition:
 
-- a linked GitLab issue with current state and an exact dependency, counter, or
+- a linked GitHub issue with current state and an exact dependency, counter, or
   event that will reconsider it; or
 - explicitly declined or closed as superseded.
 
@@ -83,6 +83,6 @@ change must have one complete disposition:
 Every methodology review asks:
 
 > Could an engineer who did not participate in the agent session understand the
-> current project state from the GitLab issue/MR list and the top of each MR?
+> current project state from the GitHub issue/PR list and the top of each PR?
 
 If not, prune or relocate process detail before adding another control.

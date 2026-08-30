@@ -12,18 +12,19 @@ dominate the project.
 
 ## Evidence Order
 
-1. Identify the exact issue/MR trigger set.
-2. Read the issues, MRs, diffs, proof artifacts, independent review findings,
+1. Identify the exact issue/PR trigger set.
+2. Read the issues, PRs, diffs, proof artifacts, independent review findings,
    creator responses, and CI results.
-3. Inspect the relevant durable evidence and compare it with live GitLab state.
-4. If agent-loop telemetry is enabled, inspect its named MR-local boundaries and
+3. Inspect the relevant durable evidence and compare it with live GitHub state.
+4. If agent-loop telemetry is enabled, inspect its named PR-local boundaries and
    adjacent context; generated counts are indexes, not complete evidence.
-5. Read the current `AGENTS.md`, skills, scripts, templates, CI, GitLab
-   conventions, and ledger schemas before deciding which surface failed.
+5. Read the current `AGENTS.md`, skills, scripts, templates, CI, GitHub
+   conventions, `docs/HOST.md`, and ledger schemas before deciding which surface
+   failed.
 
 ## Review Procedure
 
-1. Create a GitLab issue from the methodology-review template.
+1. Create a GitHub issue from the methodology-review template.
 2. Fill every question with primary evidence, an answer, and one action:
    `keep`, `delete`, `automate`, or `change`.
 3. Measure proof movement, material reviewer findings, repeated failures,
@@ -47,9 +48,9 @@ A blank template, generated counter, or verdict-only note is not a review.
 - Every question has evidence, answer, and action.
 - Reviewer value is measured by actual findings and fixes.
 - Repeated manual work is counted rather than described vaguely.
-- GitLab and durable evidence agree.
+- GitHub and durable evidence agree.
 - Every actionable follow-up is bounded or explicitly declined/superseded.
-- An uninvolved engineer can understand the project from the GitLab human
+- An uninvolved engineer can understand the project from the GitHub human
   surface.
 - Independent review approves the current methodology change or no-change
   decision.

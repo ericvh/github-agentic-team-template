@@ -1,6 +1,6 @@
 ---
 name: agent-team-independent-review
-description: Use when reviewing a GitLab work-slice merge request as a role distinct from the creator; test the stated claim, highest-risk boundary, and proof sufficiency; classify comments by landing impact; and record an approval or changes-requested decision.
+description: Use when reviewing a GitHub work-slice pull request as a role distinct from the creator; test the stated claim, highest-risk boundary, and proof sufficiency; classify comments by landing impact; and record an approval or changes-requested decision.
 ---
 
 # Agent Team Independent Review
@@ -9,12 +9,12 @@ description: Use when reviewing a GitLab work-slice merge request as a role dist
 
 The reviewer must be distinct from the creator for the slice. The reviewer may
 use the same repository and tools, but must reconstruct the claim from the issue,
-MR, evidence, diff, tests, and generated artifacts rather than accepting the
+PR, evidence, diff, tests, and generated artifacts rather than accepting the
 creator's conclusion.
 
 ## Review Order
 
-1. Read `AGENTS.md`, `docs/HUMAN_SURFACE.md`, the issue, and MR human summary.
+1. Read `AGENTS.md`, `docs/HUMAN_SURFACE.md`, the issue, and PR human summary.
 2. Compare the requested problem, evidence version, target contract, and explicit
    non-claims.
 3. Inspect the diff and highest-risk code path or artifact.
@@ -22,8 +22,8 @@ creator's conclusion.
 5. Ask what plausible wrong mechanism could still pass the submitted proof.
 6. Check failure, rejection, rollback, compatibility, migration, security,
    observability, ownership, ordering, and terminal-state boundaries as relevant.
-7. Verify durable evidence matches the actual claim and GitLab state.
-8. Post one note using `docs/templates/review-note.md`.
+7. Verify durable evidence matches the actual claim and GitHub state.
+8. Post one comment using `docs/templates/review-note.md`.
 
 ## Comment Classes
 
@@ -43,6 +43,9 @@ Do not convert preferences or unrelated redesign into blockers.
 
 After creator changes, review the corrected head and affected proof. Approval
 must refer to the current code/artifact state, not an earlier diff.
+
+Apply the matching `review:*` label. Native GitHub approve/request-changes
+states are optional extra signal in this edition, not the process authority.
 
 ## Follow-Ups
 

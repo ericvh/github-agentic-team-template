@@ -1,13 +1,13 @@
 ---
 name: agent-team-work-slice
-description: Use to implement one accepted GitLab work-slice issue with pinned evidence, a bounded write scope, focused positive and negative proof, a draft merge request, independent review, and synchronized closeout.
+description: Use to implement one accepted GitHub work-slice issue with pinned evidence, a bounded write scope, focused positive and negative proof, a draft pull request, independent review, and synchronized closeout.
 ---
 
 # Agent Team Work Slice
 
 ## Preconditions
 
-- A GitLab issue exists from `.gitlab/issue_templates/work-slice.md`.
+- A GitHub issue exists from `.github/ISSUE_TEMPLATE/work-slice.md`.
 - Evidence is versioned and relevant source/spec/runtime/data has been read.
 - Current and target proof levels are named.
 - Predecessor, owner, authority, write scope, integration order, and independent
@@ -20,7 +20,7 @@ If these are missing, use `$agent-team-evidence-map` first.
 
 1. Read `AGENTS.md`, the active issue, `docs/templates/work-slice-plan.md`, and
    relevant evidence, proof, decision, experiment, and risk rows.
-2. Confirm the issue and local plan still match current GitLab and evidence.
+2. Confirm the issue and local plan still match current GitHub and evidence.
 3. Record the slice boundary before editing: behavior, API/artifact, invariants,
    non-claims, proof, reviewer focus, and write paths.
 4. Implement the smallest coherent mechanism that retires or narrows the named
@@ -28,11 +28,11 @@ If these are missing, use `$agent-team-evidence-map` first.
 5. Run focused static, positive, negative/failure, and discriminating proof.
 6. Run shared gates proportional to the touched surface.
 7. Update durable evidence in the same slice.
-8. Open or refresh a draft MR from the work-slice template.
+8. Open or refresh a draft PR from the work-slice template.
 9. Obtain independent review through `$agent-team-independent-review`.
 10. Resolve blockers/questions, rerun affected proof, and record creator
     responses.
-11. After authorized merge, reconcile landed GitLab and durable state once.
+11. After authorized merge, reconcile landed GitHub and durable state once.
 
 ## Implementation Rules
 
@@ -47,6 +47,6 @@ If these are missing, use `$agent-team-evidence-map` first.
 
 ## Completion Report
 
-Name exact commands and results, proof movement, review decision, GitLab state,
+Name exact commands and results, proof movement, review decision, GitHub state,
 durable rows changed, methodology trigger status, and the next issue. If the
-slice is not landed, leave a resumable issue/MR state with exact remaining work.
+slice is not landed, leave a resumable issue/PR state with exact remaining work.

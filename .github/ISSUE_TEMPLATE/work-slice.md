@@ -1,3 +1,10 @@
+---
+name: Work Slice
+about: One proof-carrying semantic slice with pinned evidence and a named proof promotion
+title: ""
+labels: []
+---
+
 # Work Slice
 
 ## Human Goal
@@ -77,4 +84,4 @@ Complete this sentence:
 - [ ] Focused and required broad verification pass.
 - [ ] Independent review is resolved and approved.
 - [ ] Follow-ups have bounded dispositions.
-- [ ] Durable evidence and GitLab state are reconciled.
+- [ ] Durable evidence and GitHub state are reconciled.

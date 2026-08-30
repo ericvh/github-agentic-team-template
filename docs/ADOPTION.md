@@ -3,10 +3,10 @@
 Adopt the mechanism in stages. Copying every visible control before the project
 has produced evidence creates process without continuity.
 
-## Stage 1: One Proof-Carrying MR
+## Stage 1: One Proof-Carrying PR
 
 - Fill the project formulation.
-- Customize `AGENTS.md`, one issue template, one MR template, and CI.
+- Customize `AGENTS.md`, one issue template, one PR template, and CI.
 - Define the evidence anchor, proof ladder, and independent-review rule.
 - Land one vertical behavior through the complete issue-to-closeout loop.
 
@@ -17,8 +17,8 @@ original chat.
 
 - Use orchestrator, evidence mapper, implementer, reviewer, CI/proof owner, and
   state closer responsibilities.
-- Maintain a short dependency-ordered GitLab horizon.
-- Add only the ledgers needed to preserve evidence that GitLab and code do not.
+- Maintain a short dependency-ordered GitHub horizon.
+- Add only the ledgers needed to preserve evidence that GitHub and code do not.
 - Permit parallel work after issue and write scopes are disjoint.
 
 Exit test: two independent slices can proceed without conflicting edits or
@@ -33,7 +33,7 @@ ambiguous integration order.
 - Automate repeated CI, evidence generation, or state reconciliation.
 
 Exit test: the project removes or repairs a recurring failure without making the
-human GitLab surface harder to read.
+human GitHub surface harder to read.
 
 ## Do Not Copy Literally
 
@@ -42,8 +42,10 @@ human GitLab surface harder to read.
 - Fixed review and cleanup counts: tune to risk and cycle time.
 - Every possible ledger: retain domain evidence, not duplicated workflow state.
 - Token/session telemetry: enable only when it changes a cost or continuity
-  decision, and keep it MR-local.
+  decision, and keep it PR-local.
 - A local runner fallback: add only after runner availability repeats as a real
   constraint.
 - Parity vocabulary: use requirement, compatibility, migration, regression,
   experiment, security, or operational fitness language that fits the project.
+- Host-native GitHub tightening (CODEOWNERS, YAML issue forms, required
+  reviewers, label bots): those are Option C in `docs/HOST.md`, not Stage 1.
