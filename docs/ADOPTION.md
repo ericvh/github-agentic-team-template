@@ -5,7 +5,8 @@ has produced evidence creates process without continuity.
 
 ## Stage 1: One Proof-Carrying PR
 
-- Fill the project formulation.
+- Fill the project formulation, including spec-exercise path and command.
+- Land the Designed spec-exercise before the first vertical implementation.
 - Customize `AGENTS.md`, one issue template, one PR template, and CI.
 - Define the evidence anchor, proof ladder, and independent-review rule.
 - Land one vertical behavior through the complete issue-to-closeout loop.
