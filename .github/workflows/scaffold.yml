@@ -12,5 +12,12 @@ jobs:
       - name: Validate scaffold
         run: bash scripts/check-scaffold.sh
 
+  spec-exercise:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Run named spec-exercise command
+        run: bash scripts/run-named-spec-exercise.sh
+
 # Add project-specific build, unit, contract, integration, and evidence jobs
 # only when docs/project-formulation.md names the proof they provide.

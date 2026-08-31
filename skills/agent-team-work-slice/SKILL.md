@@ -16,6 +16,16 @@ description: Use to implement one accepted GitHub work-slice issue with pinned e
 
 If these are missing, use `$agent-team-evidence-map` first.
 
+## Hard stop
+
+Do not implement product code when current proof is below Designed
+(`proof:none` or `proof:mapped`, or Unmapped/Mapped on the issue). Stop and
+land the spec-exercise first.
+
+Exception: a `kind:scaffold` spec-exercise issue whose target is Designed may
+write `docs/specs/`, `docs/project-formulation.md`, ledgers, and the named
+harness command only. It must not implement the first vertical.
+
 ## Workflow
 
 1. Read `AGENTS.md`, the active issue, `docs/templates/work-slice-plan.md`, and

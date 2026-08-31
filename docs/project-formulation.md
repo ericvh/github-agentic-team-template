@@ -49,8 +49,10 @@ Authority levels:
 
 ## Proof
 
-- Enabled levels: `mapped, static, unit, contract, integration, operational`
+- Enabled levels: `mapped, designed, static, unit, contract, integration, operational`
 - Required shared gates: `<commands>`
+- Spec-exercise path: `docs/specs/m0-exercise.md`
+- Spec-exercise command: `scripts/spec-exercise.sh`
 - Required negative evidence: `<rejection/fault/rollback/edge case>`
 - Performance claim rule: generated, versioned measurement artifact required
 - Proof-ledger owner: `<role>`
@@ -96,7 +98,7 @@ Authority levels:
 
 | Rank | Issue | Outcome | Evidence boundary | Proof promotion | Predecessor | Unblocks |
 | --- | --- | --- | --- | --- | --- | --- |
-| 1 |  |  |  |  |  |  |
+| 1 | spec-exercise | Designed harness for `<one end-to-end behavior>` | `<repo/spec/runtime/data/product requirement/bug report>` | Unmapped → Designed | none | first implementation slice |
 | 2 |  |  |  |  |  |  |
 | 3 |  |  |  |  |  |  |
 

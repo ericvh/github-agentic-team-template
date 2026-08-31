@@ -29,6 +29,10 @@ required_files=(
   skills/agent-team-work-slice/SKILL.md
   skills/agent-team-independent-review/SKILL.md
   skills/agent-team-methodology-review/SKILL.md
+  docs/specs/m0-exercise.md
+  scripts/check-spec-exercise.sh
+  scripts/spec-exercise.sh
+  scripts/run-named-spec-exercise.sh
 )
 
 failures=0
@@ -54,6 +58,8 @@ required_contracts=(
   "docs/HOST.md|Option C"
   ".github/ISSUE_TEMPLATE/work-slice.md|Proof Promotion"
   ".github/PULL_REQUEST_TEMPLATE.md|Independent Review"
+  "docs/project-formulation.md|Spec-exercise command"
+  "docs/WORKFLOW.md|Designed spec-exercise"
 )
 
 for check in "${required_contracts[@]}"; do
@@ -96,6 +102,12 @@ while IFS= read -r skill; do
     skill_count=$((skill_count + 1))
   fi
 done < <(find skills -mindepth 2 -maxdepth 2 -name SKILL.md -print | sort)
+
+# shellcheck source=scripts/check-spec-exercise.sh
+source "$(dirname "$0")/check-spec-exercise.sh"
+if ! check_spec_exercise_formulation docs/project-formulation.md auto; then
+  failures=$((failures + 1))
+fi
 
 if grep -RInE '[[:blank:]]+$' --include='*.md' --include='*.yml' --include='*.sh' .; then
   echo "trailing whitespace found" >&2

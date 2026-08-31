@@ -10,7 +10,7 @@ Milestones are outcome phases with exit evidence, not calendar buckets.
 
 | Milestone | Purpose | Exit evidence |
 | --- | --- | --- |
-| M0 - Bootstrap | Prove the team can execute and review one slice | scaffold validator and first landed PR |
+| M0 - Bootstrap | Prove the team can pin evidence and land a Designed spec-exercise | scaffold validator, named spec-exercise command, and first landed spec-exercise PR |
 | M1 - First Vertical Behavior | Establish one end-to-end route | contract or Golden proof |
 | M2 - Capability Expansion | Reuse the vertical route for adjacent behaviors | integration evidence |
 | M3 - Hardening | Close failure, migration, security, and operational boundaries | operational evidence |
@@ -26,7 +26,7 @@ only the separator is `:` instead of `::`.
 | --- | --- | --- |
 | `kind:*` | `feature`, `bug`, `migration`, `experiment`, `cleanup`, `methodology`, `scaffold` | work type |
 | `area:*` | project domains | changed or owned domain |
-| `proof:*` | `none`, `mapped`, `static`, `unit`, `contract`, `integration`, `operational` | current proof level |
+| `proof:*` | `none`, `mapped`, `designed`, `static`, `unit`, `contract`, `integration`, `operational` | current proof level |
 | `status:*` | `planned`, `active`, `blocked`, `review`, `ready`, `landed` | workflow state |
 | `review:*` | `needs-independent`, `changes-requested`, `approved` | independent review state |
 | `risk:*` | project-specific risk | material risk requiring filtering |
@@ -74,6 +74,10 @@ Before coding, the issue must include:
 - explicit non-claims;
 - backlog and ownership context.
 
+Implementation of product code is blocked until current proof is Designed
+(spec-exercise landed). A `kind:scaffold` spec-exercise issue may write the
+spec, formulation, ledgers, and named harness only.
+
 Long orchestration belongs in `docs/templates/work-slice-plan.md`.
 
 ## Branch and Pull Request Flow
@@ -97,6 +101,7 @@ Expose proof layers rather than hiding them behind one opaque job:
 
 ```text
 validate-scaffold
+spec-exercise
 format-lint-build
 focused-unit-contract
 integration
