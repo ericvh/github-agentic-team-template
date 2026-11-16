@@ -11,6 +11,11 @@ required_files=(
   .github/ISSUE_TEMPLATE/methodology-review.md
   .github/PULL_REQUEST_TEMPLATE.md
   docs/project-formulation.md
+  docs/execution/iteration-storage.md
+  scripts/iteration-archive.py
+  tools/iteration_archive/iteration_archive.py
+  tools/iteration_archive/archive_metadata.py
+  .iteration-archive-hook.json
   docs/HOST.md
   docs/HUMAN_SURFACE.md
   docs/WORKFLOW.md
@@ -46,6 +51,8 @@ done
 
 required_contracts=(
   "AGENTS.md|Authority Contract"
+  "AGENTS.md|Iteration storage closeout"
+  "skills/agent-team-work-slice/SKILL.md|Iteration storage"
   "AGENTS.md|Human Surface Contract"
   "AGENTS.md|Team Contract"
   "AGENTS.md|Evidence and Proof Contract"
