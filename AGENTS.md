@@ -180,3 +180,15 @@ Before final reporting, name:
 
 The next agent must be able to resume from GitHub and checked-in evidence without
 reconstructing the previous session from chat.
+
+<!-- iteration-archive:begin -->
+## Iteration storage closeout
+
+Before an experimental or A-Team iteration, and after saving its results, follow
+[the storage contract](docs/execution/iteration-storage.md). Use
+`python3 scripts/iteration-archive.py status` to identify pending storage work.
+Keep current, queued, baseline, review and rollback dependencies under explicit
+holds. Register each owned run; only release it after its consumers release it.
+Run closeout after results are durable and before the next space-heavy run.
+Storage completion does not change scientific validity, review or merge state.
+<!-- iteration-archive:end -->

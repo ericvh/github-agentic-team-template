@@ -44,6 +44,19 @@ harness command only. It must not implement the first vertical.
     responses.
 11. After authorized merge, reconcile landed GitHub and durable state once.
 
+## Iteration storage
+
+Before implementation or another proof run, follow
+`docs/execution/iteration-storage.md`: inspect status, recover pending work
+within standing authority, check peak scratch headroom and register active runs.
+After step 7 saves durable results, register the execution/result state and
+review dependencies. Plan and close out only released runs. Review evidence,
+queued inputs, baselines and rollback packages remain under explicit holds.
+Repeat closeout after review or landed-state reconciliation releases a hold;
+independently released scratch does not have to wait for a merge. Preserve
+storage receipts and held reasons in the handoff without changing proof or
+forge status. An unconfigured hook reports pending setup and retains originals.
+
 ## Implementation Rules
 
 - Preserve behavior promised by the issue; do not widen the claim silently.

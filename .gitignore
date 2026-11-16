@@ -6,3 +6,4 @@
 !.env.example
 docs/reports/**/*.json
 docs/reports/**/*.log
+/.local/iteration-archive.json
